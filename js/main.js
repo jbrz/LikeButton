@@ -1,9 +1,7 @@
-import _ from 'underscore';
-import moment from 'moment';
 import angular from 'angular';
 import LikeMyController from './controllers/likecontroller';
 
-console.log('Hello, World');
+console.log('angular v'+angular.version.full);
 
 angular.module('like',[])
 

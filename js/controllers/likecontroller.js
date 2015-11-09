@@ -1,21 +1,15 @@
-let LikeMyController = function() {
-  $scope.Like.lText = 'Likes';
+let LikeMyController = function($scope) {
+  $scope.likeNum = 0;
+  $scope.word = 'Likes';
 
-  function Like (obj) {
-    this.lText = obj.s;
-    this.array =obj.a;
-  }
-
-  $scope.addLike = function(x) {
-    console.log(Like);
-    if(Like.array.length === 0){
-      x.s = 'Like';
-      x.a.push(1);
+  $scope.addLike = function() {
+    $scope.likeNum = $scope.likeNum + 1;
+    if ($scope.likeNum === 1) {
+      $scope.word = 'Like';
     } else {
-      x.s = 'Likes';
-      x.a.push(1);
+      $scope.word = 'Likes';
     }
-    let like = new Like(x);
+
   };
 };
 

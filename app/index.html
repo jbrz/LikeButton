@@ -5,11 +5,12 @@
   <link rel="stylesheet" type="text/css" href="css/normalize.css">
   <link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
-<body>
+<body ng-app="like">
   <h1>Hello, Nerds</h1>
   <div class="LikeMe" ng-controller="LikeMyController">
+  {{ 5 + 5 }}
     <h2>Please sir, can I have some Likes?</h2>
-    <button ng-click="addLike(1)" class="likeBtn like" ng-model="Like">{{Like.array.length}}</button>
+    <button ng-click="addLike()" class="likeBtn like">{{likeNum}} {{word}}</button>
   </div>
   
   <script src="js/main.js"></script>
